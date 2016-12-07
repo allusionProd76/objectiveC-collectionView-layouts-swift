@@ -29,21 +29,21 @@ class WeekCalendarLayout: UICollectionViewLayout {
         var layoutAttributes: [UICollectionViewLayoutAttributes] = []
 
         let visibleIndexPaths = self.indexPathOfItems(inRect: inRect)
-        for indexPath in visibleIndexPaths! {
-            let attributes: UICollectionViewLayoutAttributes? = self.layoutAttributesForItem(at: indexPath)
-            layoutAttributes.append(attributes!)
+        for indexPath in visibleIndexPaths {
+            let attributes: UICollectionViewLayoutAttributes = self.layoutAttributesForItem(at: indexPath)!
+            layoutAttributes.append(attributes)
         }
 
         let dayHeaderViewIndexPaths = self.indexPathsOfDayHeaderViews(inRect: inRect)
         for indexPath in dayHeaderViewIndexPaths! {
-            let attributes: UICollectionViewLayoutAttributes? = self.layoutAttributesForSupplementaryView(ofKind: "DayHeaderView", at: indexPath)
-            layoutAttributes.append(attributes!)
+            let attributes: UICollectionViewLayoutAttributes = self.layoutAttributesForSupplementaryView(ofKind: "DayHeaderView", at: indexPath)!
+            layoutAttributes.append(attributes)
         }
 
         let hourHeaderViewIndexPaths = self.indexPathsOfHourHeaderViews(inRect: inRect)
         for indexPath in hourHeaderViewIndexPaths! {
-            let attributes: UICollectionViewLayoutAttributes? = self.layoutAttributesForSupplementaryView(ofKind: "HourHeaderView", at: indexPath)
-            layoutAttributes.append(attributes!)
+            let attributes: UICollectionViewLayoutAttributes = self.layoutAttributesForSupplementaryView(ofKind: "HourHeaderView", at: indexPath)!
+            layoutAttributes.append(attributes)
 
         }
         return layoutAttributes
@@ -80,7 +80,7 @@ class WeekCalendarLayout: UICollectionViewLayout {
 
     // MARK: Helpers
 
-    func indexPathOfItems(inRect: CGRect) -> [IndexPath]? {
+    func indexPathOfItems(inRect: CGRect) -> [IndexPath] {
         let minVisibleDay = self.dayIndexFrom(xCoordinate: inRect.minX)
         let maxVisibleDay = self.dayIndexFrom(xCoordinate: inRect.maxX)
         let minVisibleHour = self.dayIndexFrom(xCoordinate: inRect.minY)
@@ -89,7 +89,7 @@ class WeekCalendarLayout: UICollectionViewLayout {
         let dataSource: CalendarDataSource? = self.collectionView!.dataSource as! CalendarDataSource?
         let indexPaths: [IndexPath]? = dataSource?.indexPathsOfEventsBetweenMinDayIndex(minDayIndex: minVisibleDay, maxDayIndex: maxVisibleDay, minStartHour: minVisibleHour, maxStartHour: maxVisibleHour)
 
-        return indexPaths
+        return indexPaths!
     }
 
     func dayIndexFrom(xCoordinate: CGFloat) -> Int {
@@ -116,11 +116,11 @@ class WeekCalendarLayout: UICollectionViewLayout {
         let minDayIndex = self.dayIndexFrom(xCoordinate: inRect.minX)
         let maxDayIndex = self.dayIndexFrom(xCoordinate: inRect.maxX)
 
-        var indexPaths: [IndexPath]? = []
+        var indexPaths: [IndexPath] = []
         let idx = minDayIndex
         for idx in idx..<maxDayIndex {
             let indexPath = IndexPath(indexes: [0,idx])
-            indexPaths?.append(indexPath)
+            indexPaths.append(indexPath)
         }
 
         return indexPaths
@@ -134,11 +134,11 @@ class WeekCalendarLayout: UICollectionViewLayout {
         let minHourIndex = self.hourIndexFrom(yCoordinate: inRect.minX)
         let maxHourIndex = self.hourIndexFrom(yCoordinate: inRect.maxX)
 
-        var indexPaths: [IndexPath]? = []
+        var indexPaths: [IndexPath] = []
         let idx = minHourIndex
         for idx in idx..<maxHourIndex {
             let indexPath = IndexPath(indexes: [0,idx])
-            indexPaths?.append(indexPath)
+            indexPaths.append(indexPath)
         }
 
         return indexPaths

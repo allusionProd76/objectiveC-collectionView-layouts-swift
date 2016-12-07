@@ -10,19 +10,30 @@
         <scene sceneID="GvF-b4-97H">
             <objects>
                 <collectionViewController id="5mf-vj-5jH" customClass="CalendarViewController" customModule="calendarCollectionViewLayout" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qlG-iQ-fae">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="qlG-iQ-fae">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewLayout key="collectionViewLayout" id="t2l-B4-RF3" customClass="WeekCalendarLayout" customModule="calendarCollectionViewLayout" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarEventCell" id="LAd-A8-68l" customClass="CalendarEventCell" customModule="calendarCollectionViewLayout" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="97" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="97" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtR-FP-Z90">
+                                            <frame key="frameInset" minX="4" minY="8" width="85" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="customSize" width="97" height="119"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -34,7 +45,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gs-WC-RQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="bDn-tG-DQk" customClass="CalendarDataSource" customModule="calendarCollectionViewLayout" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-137" y="259"/>
+            <point key="canvasLocation" x="-138.40000000000001" y="258.62068965517244"/>
         </scene>
     </scenes>
 </document>

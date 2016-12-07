@@ -235,6 +235,7 @@
 				TargetAttributes = {
 					08C47F3C1DD6B560007A9559 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A6775489C9;
 						ProvisioningStyle = Automatic;
 					};
 					08C47F501DD6B560007A9559 = {
@@ -462,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A6775489C9;
 				INFOPLIST_FILE = calendarCollectionViewLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meagcorp.calendarCollectionViewLayout;
@@ -474,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A6775489C9;
 				INFOPLIST_FILE = calendarCollectionViewLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meagcorp.calendarCollectionViewLayout;

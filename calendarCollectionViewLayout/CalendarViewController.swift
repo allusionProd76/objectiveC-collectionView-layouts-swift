@@ -25,7 +25,7 @@ class CalendarViewController: UICollectionViewController {
         dataSource?.configureCellClosure =  {(cell: CalendarEventCell?, indexPath: IndexPath?, event: CalendarEvent) in
             cell!.titleLabel?.text = event.title
         }
-        dataSource?.configureHeaderViewClosure? = {(headerView: HeaderView?, kind: String?, indexPath: IndexPath?) in
+        dataSource?.configureHeaderViewClosure = {(headerView: HeaderView?, kind: String?, indexPath: IndexPath?) in
             if kind == "DayHeaderView" {
                 headerView?.titleLabel?.text = "Day \(indexPath!.item + 1)"
             }
