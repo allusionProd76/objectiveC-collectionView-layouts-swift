@@ -119,7 +119,7 @@ class WeekCalendarLayout: UICollectionViewLayout {
         var indexPaths: [IndexPath]? = []
         let idx = minDayIndex
         for idx in idx..<maxDayIndex {
-            let indexPath = IndexPath.init(index: idx)
+            let indexPath = IndexPath(indexes: [0,idx])
             indexPaths?.append(indexPath)
         }
 
@@ -137,7 +137,7 @@ class WeekCalendarLayout: UICollectionViewLayout {
         var indexPaths: [IndexPath]? = []
         let idx = minHourIndex
         for idx in idx..<maxHourIndex {
-            let indexPath = IndexPath.init(index: idx)
+            let indexPath = IndexPath(indexes: [0,idx])
             indexPaths?.append(indexPath)
         }
 
