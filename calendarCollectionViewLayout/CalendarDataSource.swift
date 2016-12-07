@@ -39,8 +39,8 @@ class CalendarDataSource: NSObject, UICollectionViewDataSource {
 
         for (idx, event) in self.events!.enumerated() {
             if event.day >= minDayIndex && event.day <= maxDayIndex && event.startHour >= minStartHour && event.startHour <= maxStartHour {
-                let indexPath: IndexPath? = IndexPath.init(arrayLiteral: idx)
-                indexPaths?.append(indexPath!)
+                let indexPath = IndexPath(indexes: [0,idx])
+                indexPaths?.append(indexPath)
             }
         }
         print("\(indexPaths)")
