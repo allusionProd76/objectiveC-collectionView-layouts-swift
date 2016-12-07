@@ -18,10 +18,10 @@ class CalendarViewController: UICollectionViewController {
         super.viewDidLoad()
 
         let headerViewNib = UINib.init(nibName: "HeaderView", bundle: nil)
-        self.collectionView?.register(headerViewNib, forSupplementaryViewOfKind: "DayHeaderView", withReuseIdentifier: "HeaderView")
-        self.collectionView?.register(headerViewNib, forSupplementaryViewOfKind: "HourHeaderView", withReuseIdentifier: "HeaderView")
+        collectionView?.register(headerViewNib, forSupplementaryViewOfKind: "DayHeaderView", withReuseIdentifier: "HeaderView")
+        collectionView?.register(headerViewNib, forSupplementaryViewOfKind: "HourHeaderView", withReuseIdentifier: "HeaderView")
 
-        let dataSource: CalendarDataSource? = self.collectionView?.dataSource as? CalendarDataSource
+        let dataSource: CalendarDataSource? = collectionView?.dataSource as? CalendarDataSource
         dataSource?.configureCellClosure =  {(cell: CalendarEventCell?, indexPath: IndexPath?, event: CalendarEvent) in
             cell!.titleLabel?.text = event.title
         }

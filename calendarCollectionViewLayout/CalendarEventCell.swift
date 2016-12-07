@@ -14,18 +14,18 @@ class CalendarEventCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setup()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setup()
+        setup()
     }
 
     func setup() {
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor(red: 0.0, green: 0.0, blue: 0.7, alpha: 1).cgColor
+        layer.cornerRadius = 10
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor(red: 0.0, green: 0.0, blue: 0.7, alpha: 1).cgColor
     }
     
 }

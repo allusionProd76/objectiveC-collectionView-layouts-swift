@@ -23,7 +23,7 @@ class SampleCalendarEvent: NSObject, CalendarEvent {
         let randomStartHour: UInt32 = arc4random_uniform(20)
         let randomDuration: UInt32 = arc4random_uniform(5) + 1
 
-        return self.eventWithTitle(title: title, day: Int(randomDay), startHour: Int(randomStartHour), durationInHours: Int(randomDuration))
+        return eventWithTitle(title: title, day: Int(randomDay), startHour: Int(randomStartHour), durationInHours: Int(randomDuration))
     }
 
     class func eventWithTitle(title: String?, day: Int, startHour: Int, durationInHours: Int) -> SampleCalendarEvent {
@@ -39,6 +39,6 @@ class SampleCalendarEvent: NSObject, CalendarEvent {
     }
 
     func descript() -> String? {
-        return "\(self.title): Day \(self.day) - Hour \(self.startHour) - Duration \(self.durationInHours)"
+        return "\(title): Day \(day) - Hour \(startHour) - Duration \(durationInHours)"
     }
 }
