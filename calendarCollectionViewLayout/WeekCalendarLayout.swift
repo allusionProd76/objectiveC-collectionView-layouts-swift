@@ -131,8 +131,8 @@ class WeekCalendarLayout: UICollectionViewLayout {
         if inRect.minX > HourHeaderWidth {
             return []
         }
-        let minHourIndex = hourIndexFrom(yCoordinate: inRect.minX)
-        let maxHourIndex = hourIndexFrom(yCoordinate: inRect.maxX)
+        let minHourIndex = hourIndexFrom(yCoordinate: inRect.minY)
+        let maxHourIndex = hourIndexFrom(yCoordinate: inRect.maxY)
 
         var indexPaths: [IndexPath] = []
         let idx = minHourIndex
