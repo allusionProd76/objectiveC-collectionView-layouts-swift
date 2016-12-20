@@ -131,11 +131,11 @@
 				08C47F701DD6B6BB007A9559 /* HeaderView.swift */,
 				08C47F7D1DD6C9D4007A9559 /* SampleCalendarEvent.swift */,
 				08157B861DE5EB7900E228B3 /* HeaderViewCollection.swift */,
+				08C47F771DD6B842007A9559 /* CalendarEventCell.swift */,
 				08C47F471DD6B560007A9559 /* Assets.xcassets */,
 				08C47F491DD6B560007A9559 /* LaunchScreen.storyboard */,
 				08157B841DE5EADF00E228B3 /* HeaderView.xib */,
 				08C47F4C1DD6B560007A9559 /* Info.plist */,
-				08C47F771DD6B842007A9559 /* CalendarEventCell.swift */,
 			);
 			path = calendarCollectionViewLayout;
 			sourceTree = "<group>";

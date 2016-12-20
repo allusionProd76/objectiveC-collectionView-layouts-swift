@@ -36,6 +36,8 @@ class CalendarViewController: UICollectionViewController {
             }
             else if kind == "HourHeaderView" {
                 headerView?.titleLabel?.text = "\(indexPath!.item + 1):00"
+                headerView?.layer.borderWidth = 0.5
+                headerView?.layer.borderColor = UIColor.black.cgColor
             }
         }
     }
