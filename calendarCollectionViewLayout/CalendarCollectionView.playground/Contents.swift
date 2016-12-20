@@ -12,7 +12,6 @@ public class CalendarViewController: UICollectionViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.frame = CGRect(x: 0, y: 0, width: 320, height: 480)
-        print("\(self.collectionView)")
 
         let headerViewNib = UINib.init(nibName: "HeaderView", bundle: nil)
 

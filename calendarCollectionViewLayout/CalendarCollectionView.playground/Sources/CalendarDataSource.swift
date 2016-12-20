@@ -43,7 +43,6 @@ public class CalendarDataSource: NSObject, UICollectionViewDataSource {
                 indexPaths.append(indexPath)
             }
         }
-        print("\(indexPaths)")
 
         return indexPaths
     }

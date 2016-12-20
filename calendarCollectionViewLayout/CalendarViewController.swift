@@ -17,8 +17,6 @@ class CalendarViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("contentOffset \(self.collectionView!.contentOffset)")
-
         automaticallyAdjustsScrollViewInsets = false
 
         self.collectionView?.setContentOffset(self.collectionView!.contentOffset, animated: false)
