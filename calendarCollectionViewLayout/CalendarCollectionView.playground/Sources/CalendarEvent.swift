@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CalendarEvent: NSObjectProtocol {
+public protocol CalendarEvent: NSObjectProtocol {
     var title: String? {get set}
     var day: Int {get set}
     var startHour: Int {get set}

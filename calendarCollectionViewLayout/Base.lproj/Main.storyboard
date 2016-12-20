@@ -9,8 +9,8 @@
         <!--Calendar View Controller-->
         <scene sceneID="GvF-b4-97H">
             <objects>
-                <collectionViewController id="5mf-vj-5jH" customClass="CalendarViewController" customModule="calendarCollectionViewLayout" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="qlG-iQ-fae">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="5mf-vj-5jH" customClass="CalendarViewController" customModule="calendarCollectionViewLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="qlG-iQ-fae">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,6 +41,7 @@
                             <outlet property="delegate" destination="5mf-vj-5jH" id="W4R-H5-68F"/>
                         </connections>
                     </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gs-WC-RQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="bDn-tG-DQk" customClass="CalendarDataSource" customModule="calendarCollectionViewLayout" customModuleProvider="target"/>

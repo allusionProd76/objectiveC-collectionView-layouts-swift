@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SampleCalendarEvent: NSObject, CalendarEvent {
+public class SampleCalendarEvent: NSObject, CalendarEvent {
 
-    var title: String?
-    var day: Int = 0
-    var startHour: Int = 0
-    var durationInHours: Int = 0
+    public var title: String?
+    public var day: Int = 0
+    public var startHour: Int = 0
+    public var durationInHours: Int = 0
 
-    class func randomEvent() -> SampleCalendarEvent {
+public class func randomEvent() -> SampleCalendarEvent {
         let randomID: UInt32 = arc4random_uniform(10000)
         let title: String? = "Event \(randomID)"
 
@@ -26,11 +26,11 @@ class SampleCalendarEvent: NSObject, CalendarEvent {
         return eventWithTitle(title: title, day: Int(randomDay), startHour: Int(randomStartHour), durationInHours: Int(randomDuration))
     }
 
-    class func eventWithTitle(title: String?, day: Int, startHour: Int, durationInHours: Int) -> SampleCalendarEvent {
+    public class func eventWithTitle(title: String?, day: Int, startHour: Int, durationInHours: Int) -> SampleCalendarEvent {
         return self.init(title: title, day: day, startHour: startHour, durationInHours: durationInHours)
     }
 
-    required init(title: String?, day: Int, startHour: Int, durationInHours: Int) {
+    public required init(title: String?, day: Int, startHour: Int, durationInHours: Int) {
         super.init()
         self.title = title
         self.day = day
